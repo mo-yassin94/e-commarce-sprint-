@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Online Store</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!--enable mobile device-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!--fontawesome css-->
+  <link rel="stylesheet" href="./assets/css/all.min.css" />
+
+  <!-- BOOTSTRAP LEATEST --V -->
+  <link rel="stylesheet" href="./assets/css/libs/bootstrap.min.css">
+
+  <!--bootstrap css OLD --V -->
+  <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="./assets/css/bootstrap-select.min.css" />
+  <!-- LIBS  -->
+  <!-- LIBS ===> SLIDER -->
+  <!-- <link rel="stylesheet" href="./assets/css/libs/slick.min.css" /> -->
+  <link rel="stylesheet" href="./assets/css/libs/swiper-bundle.min.css" />
+  <!--LIBS ===> animate css-->
+  <link rel="stylesheet" href="./assets/css/libs/animate-wow.css" />
+  <!--main css-->
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <!--responsive css-->
+  <link rel="stylesheet" href="./assets/css/responsive.css" />
+  <link rel="stylesheet" href="./assets/css/shop-cart.css" />
+</head>
+
+<body>
+  <header id="header" class="top-head ">
+    <!-- Static navbar -->
+    <nav class=" navbar-default navbar-expand-lg ">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-4 col-sm-12 left-rs">
+            <div class="navbar-header ">
+              <button type="button" id="top-menu" class="navbar-toggle collapsed" data-toggle="collapse"
+                data-target="#navbar" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+               <a href="index.html" class="navbar-brand">Online Store</a>
+            </div>
+              </div>
+          <div class="col-md-8 col-sm-12">
+            <div class="right-nav">
+              <div class="login-sr" id="login-sr">
+                <div class="login-signup" id="login-signup">
+                  <ul>
+                    <li><a href="login.html" class="">Login</a></li>
+                    <li>
+                      <a class="custom-b" href="SignUp.html">Sign up</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="help-r hidden-xs">
+                <div class="help-box">
+                  <ul>
+                    <li>
+                      <a data-toggle="modal" data-target="#myModal" href="#">
+                        <img height="40px" width="40px" src="./assets/images/person.png" alt="" />
+                        <span id="useremail">My Account</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#"><img class="h-i" id="cart-icon" src="./assets/images/bag.png" alt="" />
+                        <span class="bg-warning cart-itemsNum fs-3 fw-bold"
+                          style="padding: 5px; border-radius: 5px">0</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--/.container-fluid -->
+    </nav>
+  </header>
+  <!-- Modal -->
+  <div class="modal fade lug" id="myModal" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">
+            &times;
+          </button>
+          <h4 class="modal-title">Change</h4>
+        </div>
+        <div class="modal-body">
+          <ul>
+            <li>
+              <a href="#"><img src="./assets/images/flag-up-1.png" alt="" /> United States</a>
+            </li>
+            <li>
+              <a href="#"><img src="./assets/images/flag-up-2.png" alt="" /> France
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar" class="top-nav">
+    <ul id="sidebar-nav" class="sidebar-nav">
+      <li><a href="#">Help</a></li>
+      <li><a href="howitworks.html">How it works</a></li>
+      <li><a href="#">chamb for Business</a></li>
+    </ul>
+  </div>
+
+  <!-- START THE SHOPPING CARTSECTION -->
+  <div class="shop-cart ">
+    <div
+      class="cart-container bg-light col-12 col-sm-10 col-sm-offset-2 col-md-6 col-md-offset-6 col-lg-4 col-lg-offset-8">
+      <!-- THE HEADER OF CART -->
+      <div class="row">
+        <div class="btn-close-cart text-center">
+          <i class="close-cart-icon fa-solid fa-xmark fa-xl"></i>
+        </div>
+        <h3 class="text-capitalize text-center fw-bold">your cart</h3>
+      </div>
+
+      <!-- START CART ITEMS [PRODUCTS] -->
+      <div class="row cart-content">
+        <!-- <div class="cart-card border-bottom">
+            <div class="cart-description">
+              <img src="././assets/images/lag-61.png" alt="course instructor" class="cart-item-img">
+              <div class="cart-title">
+                <a href="#" class="cart-item-name ">
+                  <span class="cart-item-name" id="cart-item-name">single panel bed</span>
+                  <span class="cart-item-price">39$</span>  </a>
+  
+                <span class="remove-cart-item"> remove </span>
+              </div>
+            </div>
+  
+            <div class="cart-item-quantity">
+              <i class="fas fa-chevron-up arrow-up"></i>
+              <p class="item-amount text-center">1</p>
+              <i class="fas fa-chevron-down arrow-down"></i>
+            </div>
+          </div> -->
+      </div>
+
+      <!-- THE FOOTER OF CART -->
+      <div class="cart-footer text-center text-capitalize ">
+        <h3>your total : $ <span class="cart-total d-inlin">0</span></h3>
+        <div class="row">
+          <button class="btn-m btn-pr clear-cart w-50">
+            <div class="btn-text">clear cart</div>
+          </button>
+          <a class="btn-m btn-pr chekout-cart" href="checkout.html">
+            <div class="btn-text">chek out</div>
+          </A>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="page-content-product">
+    <div class="main-product">
+      <div class="container">
+        <div class="row clearfix">
+          <div class="find-box">
+            <h1>Find your next product</h1>
+            <h4>It has never been easier.</h4>
+            <div class="product-sh">
+              <div class="col-sm-6">
+                <div class="form-sh">
+                  <input type="text" placeholder="Search something you love" />
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="form-sh">
+                  <select class="selectpicker">
+                    <option>Textiles</option>
+                    <option>Furniture</option>
+                    <option>Leather</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="form-sh"><a class="btn" href="#">Search</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row clearfix" id="productscontainer">
+            
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="products">
+    <div class="main-products">
+      <h2>TRENDING PRODUCTS ON CHAMB</h2>
+      <!-- Slider products container -->
+      <div class="swiper products-slider">
+        <div class="swiper-wrapper products-content">
+          <!-- Slides -->
+
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <!-- If we need scrollbar -->
+        <!-- <div class="swiper-scrollbar"></div> -->
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div class="copyright">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <p>Online Store All Rights Reserved. Company Name © 2018</p>
+          </div>
+          <div class="col-md-4">
+            <ul class="list-inline socials">
+              <li>
+                <a href="">
+                  <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <i class="fa-brands fa-twitter" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <i class="fa-brands fa-instagram-square" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--fontawesome js-->
+  <script src="./assets/js/all.min.js"></script>
+
+  <!--bootstrap js  oOLD --V -->
+  <script src="./assets/js/bootstrap.min.js"></script>
+  <script src="./assets/js/bootstrap-select.min.js"></script>
+
+  <!-- BOOTSTRAP NEW --V  -->
+  <script src="./assets/js/libs/bootstrap.bundle.min.js"></script>
+  <!-- LIBS ===> SLIDER -->
+  <script src="./assets/js/libs/slick.min.js"></script>
+  <script src="./assets/js/libs/swiper-bundle.min.js"></script>
+
+  <!--LIBS ===> animate css-->
+  <script src="./assets/js/libs/wow.min.js"></script>
+
+  <!--main js-->
+  <script src="./assets/js/jquery-1.12.4.min.js"></script>
+  <script src="./js/main.js"></script>
+
+  <!--custom js-->
+
+  <script src="./assets/js/custom.js"></script>
+  <script src="./assets/js/v_1/cart-shop.js"></script>
+  <script src="./js/All.js"></script>
+</body>
+
+</html>

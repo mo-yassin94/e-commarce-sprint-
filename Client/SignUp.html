@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="./assets/css/bootstrap.sprint.css" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+         
+  </head>
+  <body>
+<!-- start navbar -->
+    <header id="header" class="top-head">
+        <!-- Static navbar -->
+        <nav class=" ">
+           <div class="container">
+              <div class="row ">
+                 <div class="col-md-4 col-sm-6 left-rs">
+                    <div class="">
+                       
+                       <a href="index.html" class="navbar-brand">Online Store</a>
+                    </div>
+                </div>
+                 <div  class=" col-md-8 col-sm-6">
+                    <div class="left-nav">
+                       <div class="login-sr">
+                          <div class="login-signup">
+                             <ul >
+                                
+                                <li><a class="custom-b rounded-5 btn-login" href="login.html">Sign in</a></li>
+                             </ul>
+                          </div>
+                       </div>
+                       
+
+                    </div>
+                 </div>
+              </div>
+           </div>
+
+<!-- end navbar -->
+
+     
+    <!-- Section: Design Block -->
+
+<section class="text-center text-lg-start">
+    <style>
+      .cascading-right {
+        margin-right: -50px;
+      }
+  
+      @media (max-width: 991.98px) {
+        .cascading-right {
+          margin-right: 0;
+        }
+      }
+    </style>
+  
+    <!-- Jumbotron -->
+    <div class="container m-auto ">
+      <div class="row g-0 align-items-center">
+        <div class="col-lg-6 mb-5 mb-lg-0 col-md-6  mb-sm-0">
+          <div class="card cascading-right" style="
+              background: hsla(0, 0%, 100%, 0.55);
+              backdrop-filter: blur(30px);
+              ">
+            <div class="card-body p-5 shadow-5 text-center">
+              <h2 class="fw-bold mb-5">Sign up now</h2>
+              <form onsubmit="validateForm()">
+                <!-- 2 column grid layout with text inputs for the first and last names -->
+                <div class="row">
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                      <input type="text" id="fname" class="form-control" required />
+                      <label class="form-label label-one" for="form3Example1">First name</label>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                      <input type="text" id="secname" class="form-control" required />
+                      <label class="form-label label-two " for="form3Example2">Last name</label>
+                    </div>
+                  </div>
+                </div>
+  
+                <!-- Email input -->
+                <div class="form-outline mb-4">
+                  <input type="email" id="email" class="form-control" required placeholder="123@...." />
+                  <label class="form-label" for="form3Example3">Email address</label>
+                </div>
+  
+                <!-- Password input -->
+                <div class="form-outline mb-4">
+                  <input type="password"  class="form-control " id="pass1" value="" required placeholder="Passwords must be at least 6 characters." />
+                  <label class="form-label label-three ">Password</label>
+                </div>
+                <!-- confirm Password input -->
+                <div class="form-outline mb-4">
+                  <input type="password"  class="form-control " id="pass2" value="" required />
+                  <label class="form-label label-four" for="form3Example4">confirm Password</label>
+                </div>
+                <!-- Checkbox -->
+                <div class="form-check d-flex justify-content-center mb-4">
+                    
+                  <label class="form-check-label me-5" for="form2Example33">
+                    By creating an account, you agree to online store Conditions of Use and Privacy Notice.
+                  </label>
+                </div>
+               
+                <!-- Submit button -->
+                <button type="submit" class="btn btn-primary btn-sginup log  btn-block mb-4">
+                  Sign up
+                </button>
+             </form>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-lg-6 mb-5 mb-lg-0 col-sm-6 col-md-6 mb-sm-0">
+          <img src="./assets/images/WhatsApp Image 2.jpeg" class="w-75 img-logout rounded-4  shadow-4"
+            alt="" />
+        </div>
+      </div>
+    </div>
+    <!-- Jumbotron -->
+  </section>
+  <!-- Section: Design Block -->
+  <script src="js/main.js"></script>
+  </body>
+</html>
