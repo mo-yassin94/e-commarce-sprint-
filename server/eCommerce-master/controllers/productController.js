@@ -1,3 +1,4 @@
+import mongoose from 'mongoose';
 import Products from '../models/productModel.js';
 
 export const getProducts = async (req, res) => {
@@ -31,7 +32,7 @@ export const createProduct = async (req, res) => {
 };
 export const deleteProduct = async (req, res) => {
   try {
-    const products = await Products.find();
+    const product = await Products.find();
   } catch (err) {
     return res.status(500).json({ msg: err.message });
   }
@@ -39,18 +40,29 @@ export const deleteProduct = async (req, res) => {
 export const updateProduct = async (req, res) => {
   try {
     const products = await Products.find();
+    const oldimg = req.params.oldimg
+    const newimg = req.params.newimg
+    await Products.updateOne(
+      {
+        images: oldimg
+      },
+      {
+        images: newimg
+      }
+    );
+    res.json(products);
   } catch (err) {
-    return res.status(500).json({ msg: err.message });
+    return res.status(500).json({ msg: err.message });  
   }
 };
-
 export const getProductsByAny = async (req, res) => {
   try {
     const any = req.params.any;
     const products = await Products.find();
     const newProducts = products.filter(
-      (product) => product.product_id === any || product.category === any
+      (product) => product.product_id === any || product.category === any || product.title.includes(any)
     );
+    console.log(newProducts);
     return res.json(newProducts);
   } catch (err) {
     return res.status(500).json({ msg: err.message });

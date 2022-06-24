@@ -33,4 +33,3 @@ signupbtn.addEventListener("click", async () => {
         }
     });
 });
-

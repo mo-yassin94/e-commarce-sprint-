@@ -62,10 +62,10 @@
               <div class="help-r hidden-xs">
                 <div class="help-box">
                   <ul>
-                    <li>
-                      <a data-toggle="modal" data-target="#myModal" href="#">
+                    <li id="userdata" style="display: none;">
+                      <a data-toggle="modal" data-target="#myModal" href="profile.html">
                         <img height="40px" width="40px" src="./assets/images/person.png" alt="" />
-                        <span id="useremail">My Account</span>
+                        <span id="useremail"></span>
                       </a>
                     </li>
                     <li>
@@ -175,28 +175,22 @@
             <h1>Find your next product</h1>
             <h4>It has never been easier.</h4>
             <div class="product-sh">
-              <div class="col-sm-6">
+              <div class="col-sm-8">
                 <div class="form-sh">
-                  <input type="text" placeholder="Search something you love" />
+                  <input type="text" placeholder="Search something you love" id="searchinput"/>
                 </div>
               </div>
               <div class="col-sm-3">
-                <div class="form-sh">
-                  <select class="selectpicker">
-                    <option>Textiles</option>
-                    <option>Furniture</option>
-                    <option>Leather</option>
-                  </select>
-                </div>
-              </div>
-              <div class="col-sm-3">
-                <div class="form-sh"><a class="btn" href="#">Search</a></div>
+                <div class="form-sh"><a class="btn" target="_blank" href="" id="searchbtn">Search</a></div>
               </div>
             </div>
           </div>
         </div>
         <div class="row clearfix" id="productscontainer">
             
+        </div>
+        <div class="col-12 text-center m-5 ms-0 me-0">
+          <a href="/category.html" style="color: #fff;font-size: 20px;">Browse All Products Here..</a>
         </div>
       </div>
     </div>
@@ -217,9 +211,6 @@
         <!-- If we need navigation buttons -->
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
-
-        <!-- If we need scrollbar -->
-        <!-- <div class="swiper-scrollbar"></div> -->
       </div>
     </div>
   </div>

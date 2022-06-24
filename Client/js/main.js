@@ -17,7 +17,7 @@ window.addEventListener('load', async () => {
     getData(url).then(data => {
         for (let index = 0; index < data.length; index++) {
             let div = document.createElement("div");
-            div.classList.add("col-lg-3", "col-sm-6", "col-md-3","categorycard");
+            div.classList.add("col-lg-3", "col-sm-6", "col-md-3", "categorycard");
             let items = `
                 <a href="category.html?${data[index].name}">
                     <div class="box-img">
@@ -32,25 +32,18 @@ window.addEventListener('load', async () => {
         productscontainer.appendChild(docFragment);
     });
 });
-
-
-// validate the form Sign up 
-let log = document.querySelector(".log");
-
-log.onclick = function () {
-  let Fname = document.getElementById("fname").value;
-  let secName = document.getElementById("secname").value;
-  let email = document.getElementById("email").value;
-  localStorage.setItem("Fname", Fname);
-  localStorage.setItem("secName", secName);
-  localStorage.setItem("email", email);
-
-  let passOne = document.getElementById("pass1").value;
-  let passTwo = document.getElementById("pass2").value;
-
-  if (passOne === passTwo) {
-  } else {
-    alert("Your password does not match");
+//search button
+const searchinput = document.getElementById("searchinput");
+const searchbtn = document.getElementById("searchbtn");
+function capitalizeFirstLetter(longstring) {
+    let words = longstring.split(" ");
+    let fraze = "";
+    for (let index = 0; index < words.length; index++) {
+        fraze += words[index].charAt(0).toUpperCase() + words[index].slice(1) + " ";
+    }
+    return fraze;
   }
- 
-};
+searchbtn.addEventListener("click", () => {
+    searchbtn.setAttribute("href", `category.html?${capitalizeFirstLetter(searchinput.value)}`);
+});
+

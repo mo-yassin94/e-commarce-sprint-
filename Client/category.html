@@ -1,287 +1,283 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <title>Chamb - Responsive E-commerce HTML5 Template</title>
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <!--enable mobile device-->
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <!--bootstrap css-->
-      <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
-      <!--main css-->
-      <link rel="stylesheet" href="./assets/css/style.css">
-      <link rel="stylesheet" href="./assets/css/bootstrap-select.min.css">
-      <link rel="stylesheet" href="./assets/css/jquery-ui.css">
-      <!--responsive css-->
-      <link rel="stylesheet" href="./assets/css/responsive.css">
-      <link rel="stylesheet" href="./assets/css/shop-cart.css" />
 
-   </head>
-   <body>
-      <header id="header" class="top-head ">
-         <!-- Static navbar -->
-         <nav class=" navbar-default navbar-expand-lg ">
-           <div class="container-fluid">
-             <div class="row">
+<head>
+   <meta charset="UTF-8">
+   <title>Online Store Products </title>
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <!--enable mobile device-->
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <!--bootstrap css-->
+   <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+   <!--main css-->
+   <link rel="stylesheet" href="./assets/css/style.css">
+   <link rel="stylesheet" href="./assets/css/bootstrap-select.min.css">
+   <link rel="stylesheet" href="./assets/css/jquery-ui.css">
+   <!--responsive css-->
+   <link rel="stylesheet" href="./assets/css/responsive.css">
+   <link rel="stylesheet" href="./assets/css/shop-cart.css" />
+
+</head>
+
+<body>
+   <header id="header" class="top-head ">
+      <!-- Static navbar -->
+      <nav class=" navbar-default navbar-expand-lg ">
+         <div class="container-fluid">
+            <div class="row">
                <div class="col-md-4 col-sm-12 left-rs">
-                 <div class="navbar-header ">
-                   <button type="button" id="top-menu" class="navbar-toggle collapsed" data-toggle="collapse"
-                     data-target="#navbar" aria-expanded="false">
-                     <span class="sr-only">Toggle navigation</span>
-                     <span class="icon-bar"></span>
-                     <span class="icon-bar"></span>
-                     <span class="icon-bar"></span>
-                   </button>
-                    <a href="index.html" class="navbar-brand">Online Store</a>
-                 </div>
-                   </div>
+                  <div class="navbar-header ">
+                     <button type="button" id="top-menu" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#navbar" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                     </button>
+                     <a href="index.html" class="navbar-brand">Online Store</a>
+                  </div>
+               </div>
                <div class="col-md-8 col-sm-12">
-                 <div class="right-nav">
-                   <div class="login-sr" id="login-sr">
-                     <div class="login-signup" id="login-signup">
-                       <ul>
-                         <li><a href="login.html" class="">Login</a></li>
-                         <li>
-                           <a class="custom-b" href="SignUp.html">Sign up</a>
-                         </li>
-                       </ul>
+                  <div class="right-nav">
+                     <div class="login-sr" id="login-sr">
+                        <div class="login-signup" id="login-signup">
+                           <ul>
+                              <li><a href="login.html" class="">Login</a></li>
+                              <li>
+                                 <a class="custom-b" href="SignUp.html">Sign up</a>
+                              </li>
+                           </ul>
+                        </div>
                      </div>
-                   </div>
-                   <div class="help-r hidden-xs">
-                     <div class="help-box">
-                       <ul>
-                         <li>
-                           <a data-toggle="modal" data-target="#myModal" href="#">
-                             <img height="40px" width="40px" src="./assets/images/person.png" alt="" />
-                             <span id="useremail">My Account</span>
-                           </a>
-                         </li>
-                         <li>
-                           <a href="#"><img class="h-i" id="cart-icon" src="./assets/images/bag.png" alt="" />
-                             <span class="bg-warning cart-itemsNum fs-3 fw-bold"
-                               style="padding: 5px; border-radius: 5px">0</span>
-                           </a>
-                         </li>
-                       </ul>
+                     <div class="help-r hidden-xs">
+                        <div class="help-box">
+                           <ul>
+                              <li id="userdata" style="display: none;">
+                                 <a data-toggle="modal"  href="/profile.html">
+                                   <img height="40px" width="40px" src="./assets/images/person.png" alt="" />
+                                   <span id="useremail"></span>
+                                 </a>
+                               </li>
+                              <li>
+                                 <a href="#"><img class="h-i" id="cart-icon" src="./assets/images/bag.png" alt="" />
+                                    <span class="bg-warning cart-itemsNum fs-3 fw-bold"
+                                       style="padding: 5px; border-radius: 5px">0</span>
+                                 </a>
+                              </li>
+                           </ul>
+                        </div>
                      </div>
-                   </div>
-                 </div>
-               </div>
-             </div>
-           </div>
-           <!--/.container-fluid -->
-         </nav>
-       </header>
-      <!-- Modal -->
-      <div class="modal fade lug" id="myModal" role="dialog">
-         <div class="modal-dialog">
-            <!-- Modal content-->
-            <div class="modal-content">
-               <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal">&times;</button>
-                  <h4 class="modal-title">Change</h4>
-               </div>
-               <div class="modal-body">
-                  <ul>
-                     <li><a href="#"><img src="./assets/images/flag-up-1.png" alt="" /> United States</a></li>
-                     <li><a href="#"><img src="./assets/images/flag-up-2.png" alt="" /> France </a></li>
-                  </ul>
+                  </div>
                </div>
             </div>
          </div>
-      </div>
-      <div id="sidebar" class="top-nav">
-         <ul id="sidebar-nav" class="sidebar-nav">
-            <li><a href="#">Help</a></li>
-            <li><a href="#">How it works</a></li>
-            <li><a href="#">Chamb for Business</a></li>
-         </ul>
-      </div>
-      <div class="furniture-box">
-         <div class="terms-title">
-            <div class="container">
-               <div class="row">
-                  <ol class="breadcrumb">
-                     <li><a href="#">Forntpage </a></li>
-                     <li class="active" id="categoryheader"></li>
-                  </ol>
-               </div>
+         <!--/.container-fluid -->
+      </nav>
+   </header>
+   <!-- Modal -->
+   <div class="modal fade lug" id="myModal" role="dialog">
+      <div class="modal-dialog">
+         <!-- Modal content-->
+         <div class="modal-content">
+            <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal">&times;</button>
+               <h4 class="modal-title">Change</h4>
+            </div>
+            <div class="modal-body">
+               <ul>
+                  <li><a href="#"><img src="./assets/images/flag-up-1.png" alt="" /> United States</a></li>
+                  <li><a href="#"><img src="./assets/images/flag-up-2.png" alt="" /> France </a></li>
+               </ul>
             </div>
          </div>
       </div>
-      <div class="furniture-box">
+   </div>
+   <div id="sidebar" class="top-nav">
+      <ul id="sidebar-nav" class="sidebar-nav">
+         <li><a href="#">Help</a></li>
+         <li><a href="#">How it works</a></li>
+         <li><a href="#">Chamb for Business</a></li>
+      </ul>
+   </div>
+   <div class="furniture-box">
+      <div class="terms-title">
          <div class="container">
             <div class="row">
-               <div class="furniture-main">
-                  <h2>Furniture</h2>
-                  <div class="col-md-3 col-sm-4">
-                     <div class="furniture-left">
-                        <h3>Filter Products</h3>
-                        <div class="by-box">
-                           <h5>By price</h5>
-                           <div id="slider-range"></div>
-                           <p>
-                              <input type="text" id="amount" readonly >
-                           </p>
-                        </div>
-                        
-                        <div class="left-list-f">
-                           <div class="panel-group" id="accordion">
-                              <div class="panel panel-default">
-                                 <div class="panel-heading">
-                                    <h4 data-toggle="collapse" data-parent="#accordion" href="#collapse1" class="panel-title expand">
-                                       <div class="right-arrow pull-right"><span class="caret"></span></div>
-                                       <a href="#">Sort by</a>
-                                    </h4>
-                                 </div>
-                                 <div id="collapse1" class="panel-collapse collapse">
-                                    <div class="panel-body">Lorem ipsum dolor sit amet,</div>
-                                 </div>
+               <ol class="breadcrumb">
+                  <li><a href="index.html">Home </a></li>
+                  <li class="active" id="categoryheader"></li>
+               </ol>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="furniture-box">
+      <div class="container">
+         <div class="row">
+            <div class="furniture-main">
+               <h2></h2>
+               <div class="col-md-3 col-sm-4">
+                  <div class="furniture-left">
+                     <h3>Filter Products</h3>
+                     <div class="by-box">
+                        <h5>By price</h5>
+                        <div id="slider-range"></div>
+                        <p>
+                           <input type="text" id="amount" readonly>
+                        </p>
+                     </div>
+
+                     <div class="left-list-f">
+                        <div class="panel-group" id="accordion">
+                           <div class="panel panel-default">
+                              <div class="panel-heading">
+                                 <h4 data-toggle="collapse" data-parent="#accordion" href="#collapse1"
+                                    class="panel-title expand">
+                                    <div class="right-arrow pull-right"><span class="caret"></span></div>
+                                    <a href="#">Sort by</a>
+                                 </h4>
                               </div>
-                              <div class="panel panel-default">
-                                 <div class="panel-heading">
-                                    <h4 data-toggle="collapse" data-parent="#accordion" href="#collapse2" class="panel-title expand">
-                                       <div class="right-arrow pull-right"><span class="caret"></span></div>
-                                       <a href="#">Ships from(country)</a>
-                                    </h4>
-                                 </div>
-                                 <div id="collapse2" class="panel-collapse collapse">
-                                    <div class="panel-body">Lorem ipsum dolor sit amet,</div>
-                                 </div>
+                              <div id="collapse1" class="panel-collapse collapse">
+                                 <div class="panel-body">Lorem ipsum dolor sit amet,</div>
                               </div>
-                              <div class="panel panel-default">
-                                 <div class="panel-heading">
-                                    <h4 data-toggle="collapse" data-parent="#accordion" href="#collapse3" class="panel-title expand">
-                                       <div class="right-arrow pull-right"><span class="caret"></span></div>
-                                       <a href="#">Style</a>
-                                    </h4>
-                                 </div>
-                                 <div id="collapse3" class="panel-collapse collapse">
-                                    <div class="panel-body">Lorem ipsum dolor sit amet,</div>
-                                 </div>
+                           </div>
+                           <div class="panel panel-default">
+                              <div class="panel-heading">
+                                 <h4 data-toggle="collapse" data-parent="#accordion" href="#collapse2"
+                                    class="panel-title expand">
+                                    <div class="right-arrow pull-right"><span class="caret"></span></div>
+                                    <a href="#">Ships from(country)</a>
+                                 </h4>
                               </div>
-                              <div class="panel panel-default">
-                                 <div class="panel-heading">
-                                    <h4 data-toggle="collapse" data-parent="#accordion" href="#collapse4" class="panel-title expand">
-                                       <div class="right-arrow pull-right"><span class="caret"></span></div>
-                                       <a href="#">Pattern type</a>
-                                    </h4>
-                                 </div>
-                                 <div id="collapse4" class="panel-collapse collapse">
-                                    <div class="panel-body">Lorem ipsum dolor sit amet,</div>
-                                 </div>
+                              <div id="collapse2" class="panel-collapse collapse">
+                                 <div class="panel-body">Lorem ipsum dolor sit amet,</div>
+                              </div>
+                           </div>
+                           <div class="panel panel-default">
+                              <div class="panel-heading">
+                                 <h4 data-toggle="collapse" data-parent="#accordion" href="#collapse3"
+                                    class="panel-title expand">
+                                    <div class="right-arrow pull-right"><span class="caret"></span></div>
+                                    <a href="#">Style</a>
+                                 </h4>
+                              </div>
+                              <div id="collapse3" class="panel-collapse collapse">
+                                 <div class="panel-body">Lorem ipsum dolor sit amet,</div>
+                              </div>
+                           </div>
+                           <div class="panel panel-default">
+                              <div class="panel-heading">
+                                 <h4 data-toggle="collapse" data-parent="#accordion" href="#collapse4"
+                                    class="panel-title expand">
+                                    <div class="right-arrow pull-right"><span class="caret"></span></div>
+                                    <a href="#">Pattern type</a>
+                                 </h4>
+                              </div>
+                              <div id="collapse4" class="panel-collapse collapse">
+                                 <div class="panel-body">Lorem ipsum dolor sit amet,</div>
                               </div>
                            </div>
                         </div>
                      </div>
                   </div>
-                  <div class="col-md-6 col-sm-8">
-                     <div class="furniture-middle">
-                        
+               </div>
+               <div class="col-md-6 col-sm-8">
+                  <div class="loding-box" id="loader">
+                     <img src="./assets/images/page-not-found.png" alt="">
+                     <div class="sk-wave">
+                        <div class="sk-rect sk-rect1"></div>
+                        <div class="sk-rect sk-rect2"></div>
+                        <div class="sk-rect sk-rect3"></div>
+                        <div class="sk-rect sk-rect4"></div>
+                        <div class="sk-rect sk-rect5"></div>
+                     </div>
+                     <span>Sorry we cant find what you searched</span>
+                  </div>
+                  <div class="furniture-middle">
+
+                  </div>
+               </div>
+               <div class="col-md-3 hidden-xs">
+                  <div class="furniture-right">
+                     <h3>Categories</h3>
+                     <div class="right-list-f">
+                        <ul id="categorylist">
+                        </ul>
                      </div>
                   </div>
-                  <div class="col-md-3 hidden-xs">
-                     <div class="furniture-right">
-                        <h3>Subcategories</h3>
-                        <div class="right-list-f">
-                           <ul>
-                              <li><a href="#"><img width="32" src="./assets/images/product/1.png" alt="#" /> Chairs</a></li>
-                              <li><a href="#"><img width="32" src="./assets/images/product/2.png" alt="#" /> Office chairs</a></li>
-                              <li><a href="#"><img width="32" src="./assets/images/product/1.png" alt="" /> Special chairs</a></li>
-                              <li><a href="#"><img width="32" src="./assets/images/product/4.png" alt="" /> Living room</a></li>
-                              <li><a href="#"><img width="32" src="./assets/images/product/5.png" alt="" /> Room furniture</a></li>
-                              <li><a href="#"><img width="32" src="./assets/images/product/2.png" alt="" /> Tv Furniture</a></li>
-                              <li><a href="#"><img width="32" src="./assets/images/product/11.png" alt="" /> Office Chairs</a></li>
-                              <li><a href="#"><img width="32" src="./assets/images/product/10.png" alt="" /> Special lights</a></li>
-                              <li><a href="#"><img width="32" src="./assets/images/product/4.png" alt="" /> Home office</a></li>
-                              <li><a href="#"><img width="32" src="./assets/images/product/10.png" alt="" /> Kids furniture</a></li>
-                              <li><a href="#"><img width="32" src="./assets/images/product/11.png" alt="" /> Accessories</a></li>
-                           </ul>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="loding-box">
-                     <a href="#">
-                        <div class="sk-wave">
-                           <div class="sk-rect sk-rect1"></div>
-                           <div class="sk-rect sk-rect2"></div>
-                           <div class="sk-rect sk-rect3"></div>
-                           <div class="sk-rect sk-rect4"></div>
-                           <div class="sk-rect sk-rect5"></div>
-                        </div>
-                        <span>Loding more awesome products...</span>
-                     </a>
-                  </div>
+               </div>
+
+            </div>
+         </div>
+      </div>
+   </div>
+   <footer>
+      <div class="copyright">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-8">
+                  <p>Online Store All Rights Reserved. Company Name © 2018</p>
+               </div>
+               <div class="col-md-4">
+                  <ul class="list-inline socials">
+                     <li>
+                        <a href="">
+                           <i class="fa fa-facebook" aria-hidden="true"></i>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="">
+                           <i class="fa fa-twitter" aria-hidden="true"></i>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="">
+                           <i class="fa fa-instagram" aria-hidden="true"></i>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="#">
+                           <i class="fa fa-linkedin" aria-hidden="true"></i>
+                        </a>
+                     </li>
+                  </ul>
                </div>
             </div>
          </div>
       </div>
-      <footer>
-         <div class="copyright">
-            <div class="container">
-               <div class="row">
-                  <div class="col-md-8">
-                     <p>Online Store All Rights Reserved. Company Name © 2018</p>
-                  </div>
-                  <div class="col-md-4">
-                     <ul class="list-inline socials">
-                        <li>
-                           <a href="">
-                           <i class="fa fa-facebook" aria-hidden="true"></i>
-                           </a>
-                        </li>
-                        <li>
-                           <a href="">
-                           <i class="fa fa-twitter" aria-hidden="true"></i>
-                           </a>
-                        </li>
-                        <li>
-                           <a href="">
-                           <i class="fa fa-instagram" aria-hidden="true"></i>
-                           </a>
-                        </li>
-                        <li>
-                           <a href="#">
-                           <i class="fa fa-linkedin" aria-hidden="true"></i>
-                           </a>
-                        </li>
-                     </ul>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </footer>
-      <!--main js--> 
-      <script src="./assets/js/jquery-1.12.4.min.js"></script> 
-      <!--bootstrap js--> 
-      <script src="./assets/js/bootstrap.min.js"></script> 
-      <script src="./assets/js/bootstrap-select.min.js"></script>
-      <script src="./assets/js/jquery-ui.js"></script> 
-      <!--custom js--> 
-      <script src="./assets/js/custom.js"></script>
-      <script>
-         $( function() {
-         	$( "#slider-range" ).slider({
-         		range: true,
-         		min: 0,
-         		max: 2000,
-         		values: [ 158, 1230 ],
-         		slide: function( event, ui ) {
-         			$( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
-         		}
-         	});
-         	$( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
-         		" - $" + $( "#slider-range" ).slider( "values", 1 ) );
-         } );
-      </script>
-      <script src="./assets/js/jquery.nicescroll.min.js"></script> 
-      <script>
-         $(document).ready(function() {
-           $("#boxscroll").niceScroll({cursorborder:"",cursorcolor:"#ededed",boxzoom:true}); // First scrollable DIV
+   </footer>
+   <!--main js-->
+   <script src="./assets/js/jquery-1.12.4.min.js"></script>
+   <!--bootstrap js-->
+   <script src="./assets/js/bootstrap.min.js"></script>
+   <script src="./assets/js/bootstrap-select.min.js"></script>
+   <script src="./assets/js/jquery-ui.js"></script>
+   <!--custom js-->
+   <script src="./assets/js/custom.js"></script>
+   <script>
+      $(function () {
+         $("#slider-range").slider({
+            range: true,
+            min: 0,
+            max: 2000,
+            values: [158, 1230],
+            slide: function (event, ui) {
+               $("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);
+            }
          });
-      </script>
-   </body>
-  <!--custom js-->
-   <script src="/js/category.js"></script>
-   <script src="./js/All.js"></script>
+         $("#amount").val("$" + $("#slider-range").slider("values", 0) +
+            " - $" + $("#slider-range").slider("values", 1));
+      });
+   </script>
+   <script src="./assets/js/jquery.nicescroll.min.js"></script>
+   <script>
+      $(document).ready(function () {
+         $("#boxscroll").niceScroll({ cursorborder: "", cursorcolor: "#ededed", boxzoom: true }); // First scrollable DIV
+      });
+   </script>
+</body>
+<!--custom js-->
+<script src="/js/category.js"></script>
+<script src="./js/All.js"></script>
+
 </html>

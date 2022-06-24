@@ -13,7 +13,7 @@ productRouter.get('/:any', getProductsByAny);
 productRouter.get('/', getProducts);
 productRouter.post('/', auth, authAdmin, createProduct);
 productRouter.delete('/:id', auth, authAdmin, deleteProduct);
-productRouter.put('/:id', auth, authAdmin, updateProduct);
+productRouter.put('/:newimg/:oldimg', auth, authAdmin, updateProduct);
 
 
 

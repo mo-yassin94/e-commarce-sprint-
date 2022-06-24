@@ -6,7 +6,6 @@ window.addEventListener("load", async () => {
     const mainpic = document.getElementById("mainpic");
     const thumbpic = document.getElementById("thumbpic");
     const descriptionwords = document.getElementById("descriptionwords");
-
     let url = window.location.href;
     let urlarray = url.split("?");
     async function getData(url = '') {
@@ -30,6 +29,8 @@ window.addEventListener("load", async () => {
             mainpic.setAttribute("src",`./assets/images/${data[0].images}`);
             thumbpic.setAttribute("src",`./assets/images/${data[0].images}`);
             descriptionwords.innerText = `${data[0].description}`;
+            document.title = `Online Store-${data[0].title}`;
+
             
         } else {
             alert(data.msg);

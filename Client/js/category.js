@@ -1,4 +1,7 @@
+const loader = document.getElementById("loader"); 
+loader.style.display = "none";
 window.addEventListener("load", async () => {
+    //get products from server based on url parameter
     const productscontainer = document.querySelector(".furniture-middle");
     const docFragment = document.createDocumentFragment();
     const categoryheader = document.getElementById("categoryheader");
@@ -17,12 +20,15 @@ window.addEventListener("load", async () => {
     let rl = urlarray[1] ? `/${urlarray[1]}` : '';
     const fetchurl = `http://localhost:5000/products${rl}`;
     getData(fetchurl).then(data => {
-        if (data) {
+        if (data != "") {
+            document.title = `Online Store Products-${data[0].category}}`;
+            loader.style.display = "none";
+            productscontainer.style.display="block";
             categoryheader.innerText = rl ? data[0].category : "All";
             for (let index = 0; index < data.length; index++) {
                 let div = document.createElement("div");
                 div.classList.add("big-box");
-                div.style.margin="10px 0px";
+                div.style.margin = "10px 0px";
                 let items = `
                 <div class="big-img-box">
                     <img src="./assets/images/${data[index].images}" alt="#" />
@@ -51,12 +57,45 @@ window.addEventListener("load", async () => {
                 </div>
                 `;
                 div.innerHTML = items;
-                docFragment.appendChild(div);
+                docFragment.prepend(div);
             }
-            productscontainer.appendChild(docFragment);
+            productscontainer.prepend(docFragment);
 
         } else {
-            alert(data.msg);
+            loader.style.display = "block";
+            productscontainer.style.display="none";
+        }
+    });
+    //build categorys from server data
+    const categorylist = document.getElementById("categorylist");
+    const categoryfrag = document.createDocumentFragment();
+    const categoryurl = 'http://localhost:5000/app/category';
+    async function getcatData(url = '') {
+        // Default options are marked with *
+        const response = await fetch(url, {
+            method: 'GET', // *GET, POST, PUT, DELETE, etc.
+            credentials: 'same-origin', // include, *same-origin, omit
+            headers: {
+                'Content-Type': 'application/json'
+            },
+        });
+        return response.json(); // parses JSON response into native JavaScript objects
+    }
+    //print categorys to the index page
+    getcatData(categoryurl).then(data => {
+        if(data){
+            for (let index = 0; index < data.length; index++) {
+                let li = document.createElement("li");
+                let items = `
+                    <a href="category.html?${data[index].name}"><img width="32" src="./assets/images/product/${data[index].imagepath}" alt="#" /> ${data[index].name}</a>
+                `;
+                li.innerHTML = items;
+                categoryfrag.appendChild(li);
+            }
+            categorylist.appendChild(categoryfrag);
+        }else{
+            
         }
     });
 });
+
